@@ -2,6 +2,7 @@ import uuid
 import logging
 from typing import Literal, Optional, List
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -101,6 +102,24 @@ def handle_chat(payload: ChatRequest):
         requestId=req_id,
         classLevel=payload.classLevel,
         mode=payload.mode
+    )
+
+@app.post("/api/chat/stream")
+def handle_chat_stream(payload: ChatRequest):
+    req_id = f"req-{uuid.uuid4().hex[:8]}"
+    logger.info(f"[{req_id}] Chat stream request: mode={payload.mode}, class={payload.classLevel}, msg_len={len(payload.message)}")
+
+    history_dicts = [{"role": m.role, "content": m.content} for m in payload.history]
+
+    return StreamingResponse(
+        gemini_service.generate_chat_stream(
+            message=payload.message,
+            mode=payload.mode,
+            class_level=payload.classLevel,
+            history=history_dicts,
+            use_grounding=bool(payload.useGrounding)
+        ),
+        media_type="text/event-stream"
     )
 
 @app.get("/api/templates")

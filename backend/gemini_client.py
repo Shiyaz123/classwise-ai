@@ -1,6 +1,7 @@
 import json
 import logging
 import re
+import time
 from typing import Any, Optional
 from google import genai
 from google.genai import types
@@ -128,12 +129,12 @@ class GeminiService:
 
         # 4. Attempt call with primary model, then fallback models
         models_to_try = [
-            settings.GEMINI_MODEL,
+            "gemini-3.5-flash-lite",
             "gemini-3.5-flash",
-            "gemini-3.8-flash",
-            "gemini-3.1-flash-lite"
+            settings.GEMINI_MODEL,
+            "gemini-3.1-flash-lite",
+            "gemini-3.8-flash"
         ]
-        # Deduplicate while preserving order
         unique_models = []
         for m in models_to_try:
             if m and m not in unique_models:
@@ -141,41 +142,47 @@ class GeminiService:
 
         last_error = None
         for model_name in unique_models:
-            try:
-                logger.info(f"Invoking Gemini model '{model_name}' for Class {class_level} ({mode} mode)")
-                response = self.client.models.generate_content(
-                    model=model_name,
-                    contents=contents,
-                    config=config
-                )
+            for attempt in range(2):
+                try:
+                    logger.info(f"Invoking Gemini model '{model_name}' (attempt {attempt+1}) for Class {class_level} ({mode} mode)")
+                    response = self.client.models.generate_content(
+                        model=model_name,
+                        contents=contents,
+                        config=config
+                    )
 
-                if response and response.text:
-                    cleaned_answer, followups = self._extract_followups(response.text)
-                    citations = self._extract_citations(response)
-                    return {
-                        "answer": cleaned_answer,
-                        "citations": citations,
-                        "followups": followups,
-                        "status": "success",
-                        "model": model_name
-                    }
-            except ClientError as e:
-                last_error = e
-                err_str = str(e)
-                logger.warning(f"ClientError on model {model_name}: {err_str}")
-                # If search grounding failed with 429 quota or unsupported, retry without tools
-                if "quota" in err_str.lower() or "429" in err_str:
-                    if tools:
-                        logger.info("Search grounding caused quota/error, retrying without tools...")
-                        config.tools = None
-                        tools = None
+                    if response and response.text:
+                        cleaned_answer, followups = self._extract_followups(response.text)
+                        citations = self._extract_citations(response)
+                        return {
+                            "answer": cleaned_answer,
+                            "citations": citations,
+                            "followups": followups,
+                            "status": "success",
+                            "model": model_name
+                        }
+                except ClientError as e:
+                    last_error = e
+                    err_str = str(e)
+                    logger.warning(f"ClientError on model {model_name}: {err_str}")
+                    if "quota" in err_str.lower() or "429" in err_str:
+                        if tools:
+                            logger.info("Search grounding caused quota/error, retrying without tools...")
+                            config.tools = None
+                            tools = None
+                            time.sleep(1)
+                            continue
+                    if "404" in err_str:
+                        break  # Model doesn't exist, try next model
+                    time.sleep(1)
+                except (ServerError, APIError, Exception) as e:
+                    last_error = e
+                    err_str = str(e)
+                    logger.warning(f"Error on model {model_name}: {e}")
+                    if "503" in err_str or "demand" in err_str:
+                        time.sleep(1)
                         continue
-                if "404" in err_str:
-                    continue  # Try next model
-            except (ServerError, APIError, Exception) as e:
-                last_error = e
-                logger.warning(f"Error on model {model_name}: {e}")
-                continue
+                    break
 
         # If all live models failed
         err_msg = str(last_error) if last_error else "Unknown error"
@@ -194,6 +201,111 @@ class GeminiService:
             "model": settings.GEMINI_MODEL,
             "error_detail": err_msg
         }
+
+    def generate_chat_stream(
+        self,
+        message: str,
+        mode: str,
+        class_level: int,
+        history: list[dict],
+        use_grounding: bool = False
+    ):
+        """Streams Gemini tokens as Server-Sent Events (SSE)."""
+        if not self.client and settings.GEMINI_API_KEY:
+            self.client = genai.Client(api_key=settings.GEMINI_API_KEY)
+
+        if not self.client:
+            err_payload = {
+                "type": "error",
+                "message": "ClassWise AI is ready, but a valid Google Gemini API key is missing. Please configure GEMINI_API_KEY."
+            }
+            yield f"data: {json.dumps(err_payload)}\n\n"
+            return
+
+        if mode.lower() == "teacher":
+            system_instruction = build_teacher_system_prompt(class_level)
+        else:
+            system_instruction = build_student_system_prompt(class_level)
+
+        bounded_history = history[-settings.MAX_HISTORY_TURNS:] if history else []
+        contents = []
+        for h in bounded_history:
+            role = "user" if h.get("role") == "user" else "model"
+            content_text = h.get("content", "").strip()
+            if content_text:
+                contents.append(
+                    types.Content(role=role, parts=[types.Part.from_text(text=content_text)])
+                )
+
+        contents.append(
+            types.Content(role="user", parts=[types.Part.from_text(text=message.strip())])
+        )
+
+        tools = None
+        if use_grounding and settings.ENABLE_SEARCH_GROUNDING:
+            tools = [types.Tool(google_search=types.GoogleSearch())]
+
+        config = types.GenerateContentConfig(
+            system_instruction=system_instruction,
+            tools=tools,
+            temperature=0.6 if mode == "student" else 0.4,
+        )
+
+        models_to_try = [
+            "gemini-3.5-flash-lite",
+            "gemini-3.5-flash",
+            settings.GEMINI_MODEL,
+            "gemini-3.1-flash-lite",
+            "gemini-3.8-flash"
+        ]
+        unique_models = []
+        for m in models_to_try:
+            if m and m not in unique_models:
+                unique_models.append(m)
+
+        accumulated_text = ""
+        citations = []
+        stream_success = False
+
+        for model_name in unique_models:
+            try:
+                logger.info(f"Streaming Gemini model '{model_name}' for Class {class_level} ({mode} mode)")
+                stream = self.client.models.generate_content_stream(
+                    model=model_name,
+                    contents=contents,
+                    config=config
+                )
+
+                for chunk in stream:
+                    if chunk.text:
+                        accumulated_text += chunk.text
+                        yield f"data: {json.dumps({'type': 'chunk', 'text': chunk.text})}\n\n"
+                    if hasattr(chunk, "candidates") and chunk.candidates:
+                        cand_citations = self._extract_citations(chunk)
+                        if cand_citations:
+                            citations.extend(cand_citations)
+
+                stream_success = True
+                cleaned_answer, followups = self._extract_followups(accumulated_text)
+                done_payload = {
+                    "type": "done",
+                    "answer": cleaned_answer,
+                    "citations": citations,
+                    "followups": followups,
+                    "model": model_name
+                }
+                yield f"data: {json.dumps(done_payload)}\n\n"
+                break
+            except Exception as e:
+                logger.warning(f"Streaming error on model {model_name}: {e}")
+                continue
+
+        if not stream_success:
+            err_payload = {
+                "type": "error",
+                "message": "ClassWise AI was temporarily unable to complete the streaming response. Please try again."
+            }
+            yield f"data: {json.dumps(err_payload)}\n\n"
 
 gemini_service = GeminiService()
 

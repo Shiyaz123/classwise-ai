@@ -223,18 +223,21 @@ export default function ChatArea({
         ) : (
           /* Message Feed */
           <div className="space-y-4">
-            {messages.map((msg, index) => (
-              <MessageItem
-                key={msg.id || index}
-                message={msg}
-                onSelectFollowup={onSelectFollowup}
-                activeClassLevel={selectedClass}
-                activeMode={mode}
-              />
-            ))}
+            {messages.map((msg, index) => {
+              if (msg.isStreaming && !msg.content) return null;
+              return (
+                <MessageItem
+                  key={msg.id || index}
+                  message={msg}
+                  onSelectFollowup={onSelectFollowup}
+                  activeClassLevel={selectedClass}
+                  activeMode={mode}
+                />
+              );
+            })}
 
-            {/* Loading Indicator */}
-            {isLoading && (
+            {/* Loading Indicator: shown when waiting for initial AI response chunk */}
+            {isLoading && (!messages.length || !messages[messages.length - 1].isStreaming || !messages[messages.length - 1].content) && (
               <div className="flex items-start gap-3 my-5 animate-in fade-in duration-200">
                 <div className={`w-9 h-9 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-sm ${
                   isTeacher

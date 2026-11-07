@@ -40,12 +40,26 @@ body {
   background: #94a3b8;
 }
 
-/* KaTeX custom sizing in chat */
+/* KaTeX custom sizing, scrolling, and error handling */
 .katex-display {
-  margin: 0.75em 0 !important;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0.5em 0.25em;
+  margin: 0.85em 0 !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding: 0.5em 0.25em !important;
+  max-width: 100% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.katex {
+  font-size: 1.05em;
+  text-rendering: auto;
+}
+
+/* Neutralize KaTeX error styling to completely prevent unexpected red text */
+.katex-error {
+  color: inherit !important;
+  background-color: transparent !important;
+  border-bottom: 1px dotted rgba(100, 116, 139, 0.4);
 }
 
 /* Markdown styling inside assistant message */

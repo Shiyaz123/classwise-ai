@@ -14,7 +14,7 @@ import {
   deleteConversation,
   clearAllConversations
 } from "./services/storage";
-import { sendChatMessage, checkBackendHealth } from "./services/api";
+import { sendChatMessage, sendChatMessageStream, checkBackendHealth } from "./services/api";
 
 export default function App() {
   const [preferences, setPreferences] = useState(() => getPreferences());
@@ -28,6 +28,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [teacherModalOpen, setTeacherModalOpen] = useState(false);
   const [backendConnected, setBackendConnected] = useState(true);
+  const abortControllerRef = useRef(null);
 
   // Initialize or restore active chat
   useEffect(() => {
@@ -141,9 +142,24 @@ export default function App() {
     }
 
     const updatedMessages = [...messages, userMsg];
+
+    // Create assistant placeholder for streaming
+    const assistantId = `msg_a_${Date.now()}`;
+    const initialAssistantMsg = {
+      id: assistantId,
+      role: "assistant",
+      content: "",
+      isStreaming: true,
+      classLevel: selectedClass,
+      mode: mode,
+      timestamp: new Date().toISOString()
+    };
+
+    const messagesWithAssistant = [...updatedMessages, initialAssistantMsg];
+
     updateConversation(activeId, {
       title: conversationTitle,
-      messages: updatedMessages,
+      messages: messagesWithAssistant,
       classLevel: selectedClass,
       mode: mode
     });
@@ -156,45 +172,132 @@ export default function App() {
     }));
 
     setIsLoading(true);
+    const abortController = new AbortController();
+    abortControllerRef.current = abortController;
+
+    let streamedContent = "";
 
     try {
-      const response = await sendChatMessage({
+      const response = await sendChatMessageStream({
         message: messageText,
         mode: mode,
         classLevel: selectedClass,
         history: historyPayload,
-        useGrounding: useGrounding
+        useGrounding: useGrounding,
+        signal: abortController.signal,
+        onChunk: (accumulated) => {
+          streamedContent = accumulated;
+          const currentConversations = loadConversations();
+          const targetConv = currentConversations.find((c) => c.id === activeId);
+          if (targetConv) {
+            targetConv.messages = targetConv.messages.map((m) =>
+              m.id === assistantId ? { ...m, content: accumulated, isStreaming: true } : m
+            );
+            saveConversations(currentConversations);
+            setConversations(currentConversations);
+          }
+        }
       });
 
-      const assistantMsg = {
-        id: `msg_a_${Date.now()}`,
+      const finalAssistantMsg = {
+        id: assistantId,
         role: "assistant",
-        content: response.answer || "No response received.",
+        content: response.answer || streamedContent || "No response received.",
         citations: response.citations || [],
         followups: response.followups || [],
-        model: response.model,
+        model: response.model || "gemini-3.5-flash",
         classLevel: response.classLevel || selectedClass,
         mode: response.mode || mode,
+        isStreaming: false,
         timestamp: new Date().toISOString()
       };
 
-      const finalMessages = [...updatedMessages, assistantMsg];
-      updateConversation(activeId, { messages: finalMessages });
-      setConversations(loadConversations());
+      const finalConversations = loadConversations();
+      const targetConv = finalConversations.find((c) => c.id === activeId);
+      if (targetConv) {
+        targetConv.messages = targetConv.messages.map((m) =>
+          m.id === assistantId ? finalAssistantMsg : m
+        );
+        saveConversations(finalConversations);
+        setConversations(finalConversations);
+      }
     } catch (err) {
-      console.error("Chat error:", err);
-      const errorMsg = {
-        id: `msg_err_${Date.now()}`,
-        role: "assistant",
-        content: `⚠️ **ClassWise Notice**: We encountered a temporary issue contacting the Gemini service: *${err.message}*. Please try sending your message again.`,
-        followups: ["Try asking again", "Can you explain with an easier example?"],
-        timestamp: new Date().toISOString()
-      };
-      const finalMessages = [...updatedMessages, errorMsg];
-      updateConversation(activeId, { messages: finalMessages });
-      setConversations(loadConversations());
+      if (err.name === "AbortError") {
+        const finalConversations = loadConversations();
+        const targetConv = finalConversations.find((c) => c.id === activeId);
+        if (targetConv) {
+          targetConv.messages = targetConv.messages.map((m) =>
+            m.id === assistantId ? { ...m, isStreaming: false } : m
+          );
+          saveConversations(finalConversations);
+          setConversations(finalConversations);
+        }
+      } else {
+        console.error("Chat error:", err);
+        if (!streamedContent) {
+          try {
+            const fallbackRes = await sendChatMessage({
+              message: messageText,
+              mode: mode,
+              classLevel: selectedClass,
+              history: historyPayload,
+              useGrounding: useGrounding
+            });
+            const finalAssistantMsg = {
+              id: assistantId,
+              role: "assistant",
+              content: fallbackRes.answer || "No response received.",
+              citations: fallbackRes.citations || [],
+              followups: fallbackRes.followups || [],
+              model: fallbackRes.model,
+              classLevel: fallbackRes.classLevel || selectedClass,
+              mode: fallbackRes.mode || mode,
+              isStreaming: false,
+              timestamp: new Date().toISOString()
+            };
+            const finalConversations = loadConversations();
+            const targetConv = finalConversations.find((c) => c.id === activeId);
+            if (targetConv) {
+              targetConv.messages = targetConv.messages.map((m) =>
+                m.id === assistantId ? finalAssistantMsg : m
+              );
+              saveConversations(finalConversations);
+              setConversations(finalConversations);
+            }
+          } catch (fallbackErr) {
+            const errorMsg = {
+              id: assistantId,
+              role: "assistant",
+              content: `⚠️ **ClassWise Notice**: We encountered a temporary issue contacting the Gemini service: *${fallbackErr.message || err.message}*. Please try sending your message again.`,
+              followups: ["Try asking again", "Can you explain with an easier example?"],
+              isStreaming: false,
+              timestamp: new Date().toISOString()
+            };
+            const finalConversations = loadConversations();
+            const targetConv = finalConversations.find((c) => c.id === activeId);
+            if (targetConv) {
+              targetConv.messages = targetConv.messages.map((m) =>
+                m.id === assistantId ? errorMsg : m
+              );
+              saveConversations(finalConversations);
+              setConversations(finalConversations);
+            }
+          }
+        } else {
+          const finalConversations = loadConversations();
+          const targetConv = finalConversations.find((c) => c.id === activeId);
+          if (targetConv) {
+            targetConv.messages = targetConv.messages.map((m) =>
+              m.id === assistantId ? { ...m, isStreaming: false } : m
+            );
+            saveConversations(finalConversations);
+            setConversations(finalConversations);
+          }
+        }
+      }
     } finally {
       setIsLoading(false);
+      abortControllerRef.current = null;
     }
   };
 
@@ -203,6 +306,9 @@ export default function App() {
   };
 
   const handleStop = () => {
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
     setIsLoading(false);
   };
 

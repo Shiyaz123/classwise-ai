@@ -10,7 +10,8 @@ backend_cmd = [
     r"C:\Users\shiya\AppData\Local\Python\bin\python3.11.exe",
     "-m", "uvicorn", "backend.main:app",
     "--host", "127.0.0.1",
-    "--port", "8000"
+    "--port", "8000",
+    "--reload"
 ]
 
 frontend_cmd = [
