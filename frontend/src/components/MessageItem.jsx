@@ -137,11 +137,6 @@ export default function MessageItem({
           <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
             Class {classLevel}
           </span>
-          {message.model && (
-            <span className="text-[10px] text-slate-400 font-mono hidden sm:inline">
-              {message.model}
-            </span>
-          )}
         </div>
 
         {/* Message Bubble & Markdown Body */}
@@ -331,23 +326,31 @@ export default function MessageItem({
         </div>
 
         {/* 1-Click Follow-Up Suggestions */}
-        {!isStreaming && message.followups && message.followups.length > 0 && (
-          <div className="mt-2.5 flex flex-wrap items-center gap-1.5 animate-in fade-in duration-300">
-            <span className="text-[11px] font-medium text-slate-600 flex items-center gap-1 mr-1">
-              <Sparkles className="w-3 h-3 text-amber-500" />
-              Suggested Follow-ups:
-            </span>
-            {message.followups.map((suggestion, idx) => (
-              <button
-                key={idx}
-                onClick={() => onSelectFollowup(suggestion)}
-                className="text-xs px-2.5 py-1 bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-700 border border-slate-200 hover:border-blue-300 rounded-xl shadow-2xs transition-all active:scale-98 text-left"
-              >
-                {suggestion}
-              </button>
-            ))}
-          </div>
-        )}
+        {!isStreaming &&
+          Array.isArray(message.followups) &&
+          message.followups.filter(
+            (f) => typeof f === "string" && f.trim().length > 3 && !f.includes("<") && !f.includes(">")
+          ).length > 0 && (
+            <div className="mt-2.5 flex flex-wrap items-center gap-1.5 animate-in fade-in duration-300">
+              <span className="text-[11px] font-medium text-slate-600 flex items-center gap-1 mr-1">
+                <Sparkles className="w-3 h-3 text-amber-500" />
+                Suggested Follow-ups:
+              </span>
+              {message.followups
+                .filter(
+                  (f) => typeof f === "string" && f.trim().length > 3 && !f.includes("<") && !f.includes(">")
+                )
+                .map((suggestion, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => onSelectFollowup(suggestion)}
+                    className="text-xs px-2.5 py-1 bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-700 border border-slate-200 hover:border-blue-300 rounded-xl shadow-2xs transition-all active:scale-98 text-left cursor-pointer"
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+            </div>
+          )}
       </div>
     </div>
   );

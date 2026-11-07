@@ -34,25 +34,56 @@ class GeminiService:
             self.client = genai.Client(api_key=self.api_key)
 
     def _extract_followups(self, text: str) -> tuple[str, list[str]]:
-        """Extracts <suggested_followups>[...]</suggested_followups> and returns cleaned text and list of followups."""
-        followups = []
-        pattern = r"<suggested_followups>(.*?)</suggested_followups>"
-        match = re.search(pattern, text, re.DOTALL)
+        """Extracts follow-up questions from any variant of <suggested_followups> or <suggest_followups> tags.
+        Returns cleaned answer text and a clean list of string suggestions.
+        """
+        followups: list[str] = []
+        if not text:
+            return "", []
+
+        # Match <suggested_followups>, <suggest_followups>, <followups>, <suggest_followup>, <suggested_questions>
+        tag_pattern = r"<(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)>(.*?)(?:</(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)>|$)"
+        match = re.search(tag_pattern, text, re.DOTALL | re.IGNORECASE)
         if match:
-            raw_json = match.group(1).strip()
+            raw_content = match.group(1).strip()
+            # Attempt 1: JSON array parse
             try:
-                parsed = json.loads(raw_json)
+                parsed = json.loads(raw_content)
                 if isinstance(parsed, list):
                     followups = [str(item).strip() for item in parsed if str(item).strip()]
             except Exception:
-                # Fallback: line-by-line or comma-split
-                items = re.findall(r'"([^"]+)"', raw_json)
+                pass
+
+            # Attempt 2: Extract double-quoted or single-quoted items
+            if not followups:
+                items = re.findall(r'["\']([^"\']{5,120}\??)["\']', raw_content)
                 if items:
-                    followups = items
-            # Remove the tag from the displayed text
-            cleaned_text = re.sub(pattern, "", text, flags=re.DOTALL).strip()
-            return cleaned_text, followups
-        return text, followups
+                    followups = [item.strip() for item in items if item.strip()]
+
+            # Attempt 3: Line-by-line items (e.g. 1. Question? or - Question?)
+            if not followups:
+                lines = [re.sub(r'^[0-9\.\-\*\s]+', '', l).strip() for l in raw_content.splitlines()]
+                followups = [l for l in lines if l and len(l) > 5 and l.endswith('?')]
+
+        # Clean all XML-like suggestion tags completely from text
+        cleaned_text = re.sub(
+            r"<(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)>.*?(?:</(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)>|$)",
+            "",
+            text,
+            flags=re.DOTALL | re.IGNORECASE
+        )
+        # Also clean any leftover open or close tags
+        cleaned_text = re.sub(r"</?(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)[^>]*>", "", cleaned_text, flags=re.IGNORECASE)
+        cleaned_text = cleaned_text.strip()
+
+        # Sanitize followups: max 3 suggestions, trimmed, no raw XML or brackets
+        sanitized_followups = []
+        for f in followups[:3]:
+            f_clean = re.sub(r'^[\[\s"\']+|[\]\s"\']+$', '', f).strip()
+            if f_clean and len(f_clean) >= 4 and not f_clean.startswith('<') and not f_clean.endswith('>'):
+                sanitized_followups.append(f_clean)
+
+        return cleaned_text, sanitized_followups
 
     def _extract_citations(self, response: Any) -> list[dict[str, str]]:
         citations = []
@@ -276,10 +307,24 @@ class GeminiService:
                     config=config
                 )
 
+                emitted_len = 0
                 for chunk in stream:
                     if chunk.text:
                         accumulated_text += chunk.text
-                        yield f"data: {json.dumps({'type': 'chunk', 'text': chunk.text})}\n\n"
+                        # Check if any follow-up suggestion tag has started in the accumulated text
+                        tag_match = re.search(
+                            r"<(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)",
+                            accumulated_text,
+                            re.IGNORECASE
+                        )
+                        safe_end = tag_match.start() if tag_match else len(accumulated_text)
+
+                        # Emit only clean text that appears before the suggestion tag
+                        if safe_end > emitted_len:
+                            safe_chunk = accumulated_text[emitted_len:safe_end]
+                            emitted_len = safe_end
+                            yield f"data: {json.dumps({'type': 'chunk', 'text': safe_chunk})}\n\n"
+
                     if hasattr(chunk, "candidates") and chunk.candidates:
                         cand_citations = self._extract_citations(chunk)
                         if cand_citations:

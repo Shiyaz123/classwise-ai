@@ -55,25 +55,17 @@ class ChatResponse(BaseModel):
 @app.get("/")
 def root():
     return {
-        "message": "ClassWise AI Backend is running! Powered by Google Gemini for Classes 1–12.",
-        "health": "/api/health",
-        "docs": "/docs"
+        "message": "ClassWise AI Backend is running for Classes 1–12.",
+        "health": "/api/health"
     }
 
 @app.get("/api/health")
 def health_check():
     key_configured = bool(settings.GEMINI_API_KEY)
-    masked_key = ""
-    if key_configured:
-        k = settings.GEMINI_API_KEY
-        masked_key = f"{k[:4]}...{k[-4:]}" if len(k) > 8 else "***"
     return {
         "status": "healthy",
         "service": "ClassWise AI Backend",
-        "geminiApiKeyConfigured": key_configured,
-        "maskedApiKey": masked_key,
-        "activeModel": settings.GEMINI_MODEL,
-        "searchGroundingEnabled": settings.ENABLE_SEARCH_GROUNDING,
+        "ready": key_configured,
         "supportedClasses": list(range(1, 13)),
         "supportedModes": ["student", "teacher"]
     }

@@ -268,7 +268,7 @@ export default function App() {
             const errorMsg = {
               id: assistantId,
               role: "assistant",
-              content: `⚠️ **ClassWise Notice**: We encountered a temporary issue contacting the Gemini service: *${fallbackErr.message || err.message}*. Please try sending your message again.`,
+              content: "⚠️ **ClassWise Notice**: We encountered a temporary connection delay. Please try asking your question again in a moment.",
               followups: ["Try asking again", "Can you explain with an easier example?"],
               isStreaming: false,
               timestamp: new Date().toISOString()

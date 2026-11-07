@@ -6,8 +6,10 @@
 export function preprocessMarkdown(content, isStreaming = false) {
   if (!content || typeof content !== "string") return "";
 
-  // 1. Remove dangling or unclosed <suggested_followups> tags if streaming
-  let text = content.replace(/<suggested_followups>[\s\S]*?(?:<\/suggested_followups>|$)/g, "");
+  // 1. Remove all variations of follow-up suggestion tags completely (never display to users)
+  let text = content
+    .replace(/<(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)[\s\S]*?(?:<\/(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)>|$)/gi, "")
+    .replace(/<\/?(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)[^>]*>/gi, "");
 
   // 2. Convert display math \[ ... \] to \n\n$$\n...\n$$\n\n
   text = text.replace(/\\\[([\s\S]*?)\\\]/g, (_, equation) => {
