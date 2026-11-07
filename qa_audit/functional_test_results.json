@@ -1,0 +1,58 @@
+{
+  "tests": [
+    {
+      "name": "Initial Page Load",
+      "status": "PASS",
+      "details": "Loaded in 1358ms, title: ClassWise AI — Adaptive Learning & Teaching (Classes 1–12)"
+    },
+    {
+      "name": "Mode Switching",
+      "status": "PASS",
+      "details": "Successfully toggled between Student and Teacher modes"
+    },
+    {
+      "name": "Class Selector",
+      "status": "PASS",
+      "details": "Detected 18 grade options in selector"
+    },
+    {
+      "name": "Chat Interaction & Formatting",
+      "status": "PASS",
+      "details": "Answer correct: true, No raw tags: true, Hidden model id: true, Chips: 6"
+    },
+    {
+      "name": "Follow-up Chip Auto-Submit",
+      "status": "PASS",
+      "details": "Successfully triggered follow-up turn \"Can you solve an algebra equation with me?\""
+    },
+    {
+      "name": "Tables & Mermaid Visuals",
+      "status": "PASS",
+      "details": "HTML Table: true, Mermaid/SVG: true"
+    },
+    {
+      "name": "Teacher Mode Capabilities",
+      "status": "PASS",
+      "details": "Teacher mode verified with dedicated pedagogical tools"
+    },
+    {
+      "name": "LocalStorage History Persistence",
+      "status": "PASS",
+      "details": "Preserved 4/4 messages across browser reload"
+    },
+    {
+      "name": "Responsive Design (Tablet/Mobile)",
+      "status": "PASS",
+      "details": "Verified layout scaling without horizontal breakages"
+    },
+    {
+      "name": "Security & Secret Sanitization",
+      "status": "PASS",
+      "details": "Zero API keys or system prompts exposed in client"
+    }
+  ],
+  "consoleErrors": [],
+  "networkFailures": [],
+  "startTime": "2026-11-07T19:32:04.141Z",
+  "endTime": "2026-11-07T19:32:38.869Z"
+}

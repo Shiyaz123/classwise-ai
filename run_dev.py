@@ -11,7 +11,8 @@ backend_cmd = [
     "-m", "uvicorn", "backend.main:app",
     "--host", "127.0.0.1",
     "--port", "8000",
-    "--reload"
+    "--reload",
+    "--reload-dir", "backend"
 ]
 
 frontend_cmd = [

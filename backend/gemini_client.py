@@ -41,8 +41,8 @@ class GeminiService:
         if not text:
             return "", []
 
-        # Match <suggested_followups>, <suggest_followups>, <followups>, <suggest_followup>, <suggested_questions>
-        tag_pattern = r"<(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)>(.*?)(?:</(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)>|$)"
+        # Match any variation of suggest/suggested/suggests + followup/followups/questions
+        tag_pattern = r"<(?:suggests?_?followups?|suggested_followups?|followups?|suggested_questions?)>(.*?)(?:</(?:suggests?_?followups?|suggested_followups?|followups?|suggested_questions?)>|$)"
         match = re.search(tag_pattern, text, re.DOTALL | re.IGNORECASE)
         if match:
             raw_content = match.group(1).strip()
@@ -67,13 +67,13 @@ class GeminiService:
 
         # Clean all XML-like suggestion tags completely from text
         cleaned_text = re.sub(
-            r"<(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)>.*?(?:</(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)>|$)",
+            r"<(?:suggests?_?followups?|suggested_followups?|followups?|suggested_questions?)>.*?(?:</(?:suggests?_?followups?|suggested_followups?|followups?|suggested_questions?)>|$)",
             "",
             text,
             flags=re.DOTALL | re.IGNORECASE
         )
         # Also clean any leftover open or close tags
-        cleaned_text = re.sub(r"</?(?:suggested_followups|suggest_followups|suggest_followup|followups|suggested_questions)[^>]*>", "", cleaned_text, flags=re.IGNORECASE)
+        cleaned_text = re.sub(r"</?(?:suggests?_?followups?|suggested_followups?|followups?|suggested_questions?)[^>]*>", "", cleaned_text, flags=re.IGNORECASE)
         cleaned_text = cleaned_text.strip()
 
         # Sanitize followups: max 3 suggestions, trimmed, no raw XML or brackets
