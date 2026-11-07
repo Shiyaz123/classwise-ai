@@ -51,6 +51,14 @@ class ChatResponse(BaseModel):
     classLevel: int
     mode: str
 
+@app.get("/")
+def root():
+    return {
+        "message": "ClassWise AI Backend is running! Powered by Google Gemini for Classes 1–12.",
+        "health": "/api/health",
+        "docs": "/docs"
+    }
+
 @app.get("/api/health")
 def health_check():
     key_configured = bool(settings.GEMINI_API_KEY)
