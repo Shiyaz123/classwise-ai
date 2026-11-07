@@ -2,6 +2,8 @@
 
 > **An adaptive AI learning and teaching assistant for Classes 1–12, powered by the Google Gemini API.**
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Shiyaz123/classwise-ai)
+
 ---
 
 ## 🌟 Executive Summary
