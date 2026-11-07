@@ -1,6 +1,10 @@
-const envApiUrl = import.meta.env.VITE_API_URL;
-const API_BASE = envApiUrl 
-  ? (envApiUrl.endsWith("/api") ? envApiUrl : `${envApiUrl.replace(/\/$/, "")}/api`)
+const rawApiUrl = import.meta.env.VITE_API_URL;
+let cleanApiUrl = rawApiUrl ? rawApiUrl.trim() : "";
+if (cleanApiUrl && !cleanApiUrl.startsWith("http://") && !cleanApiUrl.startsWith("https://")) {
+  cleanApiUrl = `https://${cleanApiUrl}`;
+}
+const API_BASE = cleanApiUrl 
+  ? (cleanApiUrl.endsWith("/api") ? cleanApiUrl : `${cleanApiUrl.replace(/\/$/, "")}/api`)
   : "/api";
 
 export const checkBackendHealth = async () => {
