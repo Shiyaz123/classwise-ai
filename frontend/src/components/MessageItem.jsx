@@ -1,0 +1,207 @@
+import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import remarkGfm from "remark-gfm";
+import {
+  Copy,
+  Check,
+  Download,
+  BookOpen,
+  User,
+  Sparkles,
+  ExternalLink,
+  GraduationCap,
+  Presentation
+} from "lucide-react";
+import MermaidViewer from "./MermaidViewer";
+import { exportDocumentToPdf } from "../services/pdfExport";
+
+export default function MessageItem({
+  message,
+  onSelectFollowup,
+  activeClassLevel = 6,
+  activeMode = "student"
+}) {
+  const [copied, setCopied] = useState(false);
+  const isUser = message.role === "user";
+  const classLevel = message.classLevel || activeClassLevel;
+  const mode = message.mode || activeMode;
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(message.content);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleDownloadPdf = () => {
+    const firstLine = message.content.split("\n")[0].replace(/^[#*\s]+/, "").slice(0, 50) || "ClassWise Material";
+    exportDocumentToPdf({
+      title: firstLine,
+      content: message.content,
+      mode: mode,
+      classLevel: classLevel
+    });
+  };
+
+  if (isUser) {
+    return (
+      <div className="flex justify-end my-4 animate-in fade-in duration-200">
+        <div className="flex items-start gap-2.5 max-w-2xl">
+          <div className="bg-blue-600 text-white rounded-2xl rounded-tr-xs px-4 py-3 shadow-xs">
+            <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content}</p>
+          </div>
+          <div className="w-8 h-8 rounded-xl bg-slate-200 text-slate-700 flex items-center justify-center shrink-0 mt-0.5">
+            <User className="w-4 h-4" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Assistant Message
+  return (
+    <div className="flex items-start gap-3 my-5 animate-in fade-in duration-200">
+      <div className={`w-9 h-9 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-sm mt-0.5 ${
+        mode === "teacher"
+          ? "bg-gradient-to-tr from-purple-600 to-indigo-600 shadow-purple-500/20"
+          : "bg-gradient-to-tr from-blue-600 to-indigo-600 shadow-blue-500/20"
+      }`}>
+        {mode === "teacher" ? <Presentation className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
+      </div>
+
+      <div className="flex-1 min-w-0 max-w-3xl">
+        {/* Header Metadata */}
+        <div className="flex flex-wrap items-center gap-2 mb-2">
+          <span className="font-bold text-xs text-slate-800">ClassWise AI</span>
+          <span className={`inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+            mode === "teacher"
+              ? "bg-purple-50 text-purple-700 border-purple-200"
+              : "bg-blue-50 text-blue-700 border-blue-200"
+          }`}>
+            {mode === "teacher" ? <Presentation className="w-2.5 h-2.5" /> : <GraduationCap className="w-2.5 h-2.5" />}
+            {mode === "teacher" ? "Teacher Mode" : "Student Mode"}
+          </span>
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+            Class {classLevel}
+          </span>
+          {message.model && (
+            <span className="text-[10px] text-slate-400 font-mono hidden sm:inline">
+              {message.model}
+            </span>
+          )}
+        </div>
+
+        {/* Message Bubble & Markdown Body */}
+        <div className="bg-white border border-slate-200/90 rounded-2xl rounded-tl-xs p-4 sm:p-5 shadow-xs">
+          <div className="prose-educational text-sm">
+            <ReactMarkdown
+              remarkPlugins={[remarkMath, remarkGfm]}
+              rehypePlugins={[rehypeKatex]}
+              components={{
+                code({ node, inline, className, children, ...props }) {
+                  const match = /language-(\w+)/.exec(className || "");
+                  const language = match ? match[1] : "";
+
+                  if (language === "mermaid") {
+                    return <MermaidViewer chart={String(children).replace(/\n$/, "")} />;
+                  }
+
+                  if (!inline && language) {
+                    return (
+                      <div className="my-3 rounded-xl overflow-hidden border border-slate-200 bg-slate-900 text-slate-100">
+                        <div className="px-3 py-1.5 bg-slate-800/80 text-[10px] font-mono text-slate-400 uppercase tracking-wider flex justify-between items-center">
+                          <span>{language}</span>
+                        </div>
+                        <pre className="p-3 text-xs overflow-x-auto font-mono">
+                          <code>{children}</code>
+                        </pre>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <code className={className} {...props}>
+                      {children}
+                    </code>
+                  );
+                }
+              }}
+            >
+              {message.content}
+            </ReactMarkdown>
+          </div>
+
+          {/* Grounding / Search Citations */}
+          {message.citations && message.citations.length > 0 && (
+            <div className="mt-4 pt-3 border-t border-slate-100">
+              <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1 mb-2">
+                <ExternalLink className="w-3 h-3 text-blue-600" />
+                Verified Grounding Sources
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {message.citations.map((cite, i) => (
+                  <a
+                    key={i}
+                    href={cite.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-2.5 py-1 text-xs bg-slate-50 hover:bg-blue-50 hover:text-blue-600 border border-slate-200 rounded-lg text-slate-600 transition-colors"
+                  >
+                    <span className="truncate max-w-[200px]">{cite.title || cite.url}</span>
+                    <ExternalLink className="w-2.5 h-2.5 shrink-0 opacity-70" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Action Bar */}
+          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+            <span className="text-[11px] text-slate-600">
+              Calibrated for Class {classLevel}
+            </span>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={copyToClipboard}
+                className="flex items-center gap-1 px-2.5 py-1 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors"
+                title="Copy response to clipboard"
+              >
+                {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                <span>{copied ? "Copied" : "Copy"}</span>
+              </button>
+              <button
+                onClick={handleDownloadPdf}
+                className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 transition-colors"
+                title="Download this response as a PDF document"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Download PDF</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* 1-Click Follow-Up Suggestions */}
+        {message.followups && message.followups.length > 0 && (
+          <div className="mt-2.5 flex flex-wrap items-center gap-1.5 animate-in fade-in duration-300">
+            <span className="text-[11px] font-medium text-slate-600 flex items-center gap-1 mr-1">
+              <Sparkles className="w-3 h-3 text-amber-500" />
+              Suggested Follow-ups:
+            </span>
+            {message.followups.map((suggestion, idx) => (
+              <button
+                key={idx}
+                onClick={() => onSelectFollowup(suggestion)}
+                className="text-xs px-2.5 py-1 bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-700 border border-slate-200 hover:border-blue-300 rounded-xl shadow-2xs transition-all active:scale-98 text-left"
+              >
+                {suggestion}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
