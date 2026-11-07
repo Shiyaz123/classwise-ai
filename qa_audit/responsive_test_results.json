@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-11-07T20:36:36.503Z",
+  "viewportsTested": [
+    {
+      "name": "desktop_1440x900",
+      "device": "Desktop",
+      "dimensions": "1440x900",
+      "status": "PASS",
+      "metrics": {
+        "documentScrollWidth": 1440,
+        "viewportWidth": 1440,
+        "hasHorizontalOverflow": false,
+        "headerButtonsOverlap": false,
+        "sidebarAccessible": true,
+        "modalFitsViewport": true,
+        "modalColumns": 2,
+        "composerAccessible": true,
+        "tableContained": true
+      },
+      "screenshots": [
+        "desktop_1440x900_01_student_home.png",
+        "desktop_1440x900_03_teacher_home.png",
+        "desktop_1440x900_04_teacher_modal.png",
+        "desktop_1440x900_05_table_math_response.png"
+      ]
+    },
+    {
+      "name": "tablet_landscape_1024x768",
+      "device": "Tablet Landscape",
+      "dimensions": "1024x768",
+      "status": "PASS",
+      "metrics": {
+        "documentScrollWidth": 1024,
+        "viewportWidth": 1024,
+        "hasHorizontalOverflow": false,
+        "headerButtonsOverlap": false,
+        "sidebarAccessible": true,
+        "modalFitsViewport": true,
+        "modalColumns": 2,
+        "composerAccessible": true,
+        "tableContained": true
+      },
+      "screenshots": [
+        "tablet_landscape_1024x768_01_student_home.png",
+        "tablet_landscape_1024x768_03_teacher_home.png",
+        "tablet_landscape_1024x768_04_teacher_modal.png",
+        "tablet_landscape_1024x768_05_table_math_response.png"
+      ]
+    },
+    {
+      "name": "tablet_portrait_768x1024",
+      "device": "Tablet Portrait",
+      "dimensions": "768x1024",
+      "status": "PASS",
+      "metrics": {
+        "documentScrollWidth": 768,
+        "viewportWidth": 768,
+        "hasHorizontalOverflow": false,
+        "headerButtonsOverlap": false,
+        "sidebarAccessible": true,
+        "modalFitsViewport": true,
+        "modalColumns": 2,
+        "composerAccessible": true,
+        "tableContained": true
+      },
+      "screenshots": [
+        "tablet_portrait_768x1024_01_student_home.png",
+        "tablet_portrait_768x1024_03_teacher_home.png",
+        "tablet_portrait_768x1024_04_teacher_modal.png",
+        "tablet_portrait_768x1024_05_table_math_response.png"
+      ]
+    },
+    {
+      "name": "mobile_390x844",
+      "device": "iPhone 13/14/15",
+      "dimensions": "390x844",
+      "status": "PASS",
+      "metrics": {
+        "documentScrollWidth": 390,
+        "viewportWidth": 390,
+        "hasHorizontalOverflow": false,
+        "headerButtonsOverlap": false,
+        "sidebarAccessible": true,
+        "modalFitsViewport": true,
+        "modalColumns": 1,
+        "composerAccessible": true,
+        "tableContained": true
+      },
+      "screenshots": [
+        "mobile_390x844_01_student_home.png",
+        "mobile_390x844_03_teacher_home.png",
+        "mobile_390x844_04_teacher_modal.png",
+        "mobile_390x844_05_table_math_response.png"
+      ]
+    },
+    {
+      "name": "small_mobile_360x800",
+      "device": "Android Small Phone",
+      "dimensions": "360x800",
+      "status": "PASS",
+      "metrics": {
+        "documentScrollWidth": 360,
+        "viewportWidth": 360,
+        "hasHorizontalOverflow": false,
+        "headerButtonsOverlap": false,
+        "sidebarAccessible": true,
+        "modalFitsViewport": true,
+        "modalColumns": 1,
+        "composerAccessible": true,
+        "tableContained": true
+      },
+      "screenshots": [
+        "small_mobile_360x800_01_student_home.png",
+        "small_mobile_360x800_03_teacher_home.png",
+        "small_mobile_360x800_04_teacher_modal.png",
+        "small_mobile_360x800_05_table_math_response.png"
+      ]
+    }
+  ],
+  "defectsFixed": [
+    {
+      "id": "RESP-01",
+      "description": "Prevented ClassWise AI logo from wrapping awkwardly on narrow screens (<400px)."
+    },
+    {
+      "id": "RESP-02",
+      "description": "ModeToggle simplified on mobile (Student/Teacher text with hidden \"Mode\" word on xs)."
+    },
+    {
+      "id": "RESP-03",
+      "description": "ClassSelector made compact with level badge and dropdown constrained to viewport (max-w-[calc(100vw-16px)])."
+    },
+    {
+      "id": "RESP-04",
+      "description": "Added dedicated mobile close button to Sidebar drawer and verified hamburger opening/closing."
+    },
+    {
+      "id": "RESP-05",
+      "description": "Teacher Tools modal adapted to 1-column layout on mobile with scrollable grid and touch targets."
+    },
+    {
+      "id": "RESP-06",
+      "description": "Table container wrapped in overflow-x-auto touch-pan-x with compact mobile padding."
+    },
+    {
+      "id": "RESP-07",
+      "description": "KaTeX display equations set to overflow-x-auto with touch-action: pan-x and column math alignment."
+    },
+    {
+      "id": "RESP-08",
+      "description": "Mermaid diagrams wrapped in responsive visualizer container with min-w-[240px] and max-w-full."
+    },
+    {
+      "id": "RESP-09",
+      "description": "Added bottom spacer to ChatArea preventing content obscuration behind fixed composer."
+    },
+    {
+      "id": "RESP-10",
+      "description": "Chat message bubbles set to max-w-full with responsive padding p-3.5 on mobile."
+    }
+  ]
+}

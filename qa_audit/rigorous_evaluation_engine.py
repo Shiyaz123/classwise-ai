@@ -346,3 +346,4 @@ flagged = [r for r in evaluated_student + evaluated_teacher if r['rigorous_evalu
 print(f"Total Flagged for Manual Review: {len(flagged)}")
 for f in flagged:
     print(f"  Flagged: Class {f['class']} {f['mode'].upper()} {f['qid']} - {f['rigorous_evaluation']['flags']}")
+

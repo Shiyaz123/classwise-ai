@@ -99,16 +99,26 @@ export default function Sidebar({
       >
         {/* Top Action: New Chat */}
         <div className="p-3.5 border-b border-slate-200/80 bg-white/50 space-y-2.5">
-          <button
-            onClick={() => {
-              onNewChat();
-              if (window.innerWidth < 768) onClose();
-            }}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 active:scale-98 text-white rounded-xl font-semibold text-sm shadow-sm shadow-blue-500/25 transition-all"
-          >
-            <Plus className="w-4 h-4 stroke-[2.5]" />
-            <span>New Chat</span>
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => {
+                onNewChat();
+                if (window.innerWidth < 768) onClose();
+              }}
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 active:scale-98 text-white rounded-xl font-semibold text-sm shadow-sm shadow-blue-500/25 transition-all"
+            >
+              <Plus className="w-4 h-4 stroke-[2.5]" />
+              <span>New Chat</span>
+            </button>
+            <button
+              data-testid="close-sidebar-btn"
+              onClick={onClose}
+              className="p-2.5 text-slate-500 hover:text-slate-800 rounded-xl hover:bg-slate-200/60 md:hidden transition-colors"
+              title="Close Sidebar"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
 
           {/* Search bar */}
           <div className="relative">

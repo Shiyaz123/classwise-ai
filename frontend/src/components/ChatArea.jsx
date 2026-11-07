@@ -137,35 +137,35 @@ export default function ChatArea({
   return (
     <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
       {/* Conversation Top Header Bar */}
-      <div className="sticky top-0 z-10 bg-white/90 backdrop-blur-xs border-b border-slate-200/80 px-4 sm:px-6 py-2.5 flex items-center justify-between gap-2 shadow-2xs">
-        <div className="flex items-center gap-2 truncate">
-          <h2 className="text-sm font-bold text-slate-800 truncate">
+      <div className="sticky top-0 z-10 bg-white/90 backdrop-blur-xs border-b border-slate-200/80 px-2 sm:px-4 md:px-6 py-2 flex items-center justify-between gap-1.5 sm:gap-2 shadow-2xs shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 truncate min-w-0">
+          <h2 className="text-xs sm:text-sm font-bold text-slate-800 truncate">
             {conversation?.title || "ClassWise Conversation"}
           </h2>
-          <span className="text-[11px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md shrink-0">
+          <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 bg-slate-100 px-1.5 sm:px-2 py-0.5 rounded-md shrink-0">
             Class {selectedClass}
           </span>
-          <span className={`text-[11px] font-bold px-2 py-0.5 rounded-md shrink-0 ${
+          <span className={`text-[10px] sm:text-[11px] font-bold px-1.5 sm:px-2 py-0.5 rounded-md shrink-0 ${
             isTeacher ? "bg-purple-100 text-purple-700" : "bg-blue-100 text-blue-700"
           }`}>
-            {isTeacher ? "Teacher Mode" : "Student Mode"}
+            {isTeacher ? "Teacher" : "Student"}
           </span>
         </div>
 
         {messages.length > 0 && (
           <button
             onClick={handleExportPdf}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 border border-slate-200 rounded-xl transition-all shadow-2xs shrink-0 active:scale-98"
+            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 border border-slate-200 rounded-xl transition-all shadow-2xs shrink-0 active:scale-98"
             title="Export conversation history to PDF"
           >
             <Download className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Export Chat PDF</span>
+            <span className="hidden sm:inline">Export PDF</span>
           </button>
         )}
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-6">
+      <div className="flex-1 max-w-4xl w-full mx-auto px-2 sm:px-4 md:px-6 py-3 sm:py-6">
         {messages.length === 0 ? (
           /* Empty State / Welcome Hero */
           <div className="py-8 sm:py-12 animate-in fade-in duration-300">
@@ -261,7 +261,7 @@ export default function ChatArea({
               </div>
             )}
 
-            <div ref={bottomRef} />
+            <div ref={bottomRef} className="h-6 sm:h-8" />
           </div>
         )}
       </div>

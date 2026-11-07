@@ -42,17 +42,52 @@ body {
 
 /* KaTeX custom sizing, scrolling, and error handling */
 .katex-display {
-  margin: 0.85em 0 !important;
+  margin: 0.75em 0 !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
-  padding: 0.5em 0.25em !important;
+  padding: 0.4em 0.2em !important;
   max-width: 100% !important;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
 }
 
 .katex {
   font-size: 1.05em;
   text-rendering: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .katex {
+    font-size: 0.95em;
+  }
+  .katex-display {
+    font-size: 0.95em;
+    padding: 0.3em 0.1em !important;
+  }
+}
+
+/* Ensure column math like array and aligned environments align digits cleanly */
+.katex .mtable .col-align-r {
+  text-align: right !important;
+}
+
+.katex .mtable .col-align-c {
+  text-align: center !important;
+}
+
+.katex .mtable .col-align-l {
+  text-align: left !important;
+}
+
+/* Monospace pre block styling for ASCII column math operations */
+.prose-educational pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Neutralize KaTeX error styling to completely prevent unexpected red text */

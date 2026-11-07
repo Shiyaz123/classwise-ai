@@ -88,13 +88,13 @@ export default function MessageItem({
 
   if (isUser) {
     return (
-      <div className="flex justify-end my-4 animate-in fade-in duration-200">
-        <div className="flex items-start gap-2.5 max-w-2xl">
-          <div className="bg-blue-600 text-white rounded-2xl rounded-tr-xs px-4 py-3 shadow-xs">
-            <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content}</p>
+      <div className="flex justify-end my-3 sm:my-4 animate-in fade-in duration-200">
+        <div className="flex items-start gap-2 max-w-[92%] sm:max-w-2xl">
+          <div className="bg-blue-600 text-white rounded-2xl rounded-tr-xs px-3.5 py-2.5 sm:px-4 sm:py-3 shadow-xs">
+            <p className="text-sm whitespace-pre-wrap leading-relaxed break-words">{message.content}</p>
           </div>
-          <div className="w-8 h-8 rounded-xl bg-slate-200 text-slate-700 flex items-center justify-center shrink-0 mt-0.5">
-            <User className="w-4 h-4" />
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-slate-200 text-slate-700 flex items-center justify-center shrink-0 mt-0.5">
+            <User className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </div>
         </div>
       </div>
@@ -105,23 +105,23 @@ export default function MessageItem({
   const processedContent = preprocessMarkdown(message.content, isStreaming);
 
   return (
-    <div className="flex items-start gap-3 my-5 animate-in fade-in duration-200">
+    <div className="flex items-start gap-2 sm:gap-3 my-3 sm:my-5 animate-in fade-in duration-200 max-w-full">
       <div
-        className={`w-9 h-9 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-sm mt-0.5 ${
+        className={`w-7 h-7 sm:w-9 sm:h-9 rounded-xl sm:rounded-2xl flex items-center justify-center text-white shrink-0 shadow-sm mt-0.5 ${
           mode === "teacher"
             ? "bg-gradient-to-tr from-purple-600 to-indigo-600 shadow-purple-500/20"
             : "bg-gradient-to-tr from-blue-600 to-indigo-600 shadow-blue-500/20"
         }`}
       >
-        {mode === "teacher" ? <Presentation className="w-4 h-4" /> : <BookOpen className="w-4 h-4" />}
+        {mode === "teacher" ? <Presentation className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
       </div>
 
-      <div className="flex-1 min-w-0 max-w-3xl">
+      <div className="flex-1 min-w-0 max-w-full sm:max-w-3xl">
         {/* Header Metadata */}
-        <div className="flex flex-wrap items-center gap-2 mb-2">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
           <span className="font-bold text-xs text-slate-800">ClassWise AI</span>
           <span
-            className={`inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+            className={`inline-flex items-center gap-1 text-[10px] font-bold px-1.5 sm:px-2 py-0.5 rounded-full border ${
               mode === "teacher"
                 ? "bg-purple-50 text-purple-700 border-purple-200"
                 : "bg-blue-50 text-blue-700 border-blue-200"
@@ -134,14 +134,14 @@ export default function MessageItem({
             )}
             {mode === "teacher" ? "Teacher Mode" : "Student Mode"}
           </span>
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+          <span className="text-[10px] font-bold px-1.5 sm:px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
             Class {classLevel}
           </span>
         </div>
 
         {/* Message Bubble & Markdown Body */}
-        <div className="bg-white border border-slate-200/90 rounded-2xl rounded-tl-xs p-4 sm:p-5 shadow-xs">
-          <div className="prose-educational text-sm">
+        <div className="bg-white border border-slate-200/90 rounded-2xl rounded-tl-xs p-3.5 sm:p-5 shadow-xs overflow-hidden max-w-full">
+          <div className="prose-educational text-sm break-words">
             <MarkdownErrorBoundary fallbackContent={processedContent}>
               <ReactMarkdown
                 remarkPlugins={[remarkMath, remarkGfm]}
@@ -198,8 +198,8 @@ export default function MessageItem({
                   ),
                   hr: () => <hr className="my-4 border-t border-slate-200" />,
                   table: ({ children }) => (
-                    <div className="my-3 overflow-x-auto rounded-xl border border-slate-200 shadow-2xs">
-                      <table className="min-w-full divide-y divide-slate-200 text-sm border-collapse">
+                    <div className="my-3 -mx-1 sm:mx-0 overflow-x-auto rounded-xl border border-slate-200 shadow-2xs max-w-full touch-pan-x overscroll-x-contain">
+                      <table className="min-w-full divide-y divide-slate-200 text-xs sm:text-sm border-collapse">
                         {children}
                       </table>
                     </div>
@@ -216,12 +216,12 @@ export default function MessageItem({
                     </tr>
                   ),
                   th: ({ children }) => (
-                    <th className="px-3.5 py-2.5 text-left text-xs font-semibold uppercase tracking-wider text-slate-700 border border-slate-200">
+                    <th className="px-2.5 sm:px-3.5 py-2 sm:py-2.5 text-left text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-slate-700 border border-slate-200 whitespace-nowrap bg-slate-50">
                       {children}
                     </th>
                   ),
                   td: ({ children }) => (
-                    <td className="px-3.5 py-2 text-slate-700 border border-slate-200 align-top">
+                    <td className="px-2.5 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-sm text-slate-700 border border-slate-200 align-top">
                       {children}
                     </td>
                   ),
@@ -300,26 +300,26 @@ export default function MessageItem({
           )}
 
           {/* Action Bar */}
-          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
-            <span className="text-[11px] text-slate-600">
+          <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-1.5 text-xs text-slate-400">
+            <span className="text-[10px] sm:text-[11px] text-slate-500 truncate">
               Calibrated for Class {classLevel}
             </span>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 shrink-0">
               <button
                 onClick={copyToClipboard}
-                className="flex items-center gap-1 px-2.5 py-1 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors"
+                className="flex items-center gap-1 px-2 py-1 sm:px-2.5 sm:py-1 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors text-xs"
                 title="Copy response to clipboard"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copied ? "Copied" : "Copy"}</span>
+                <span className="hidden xs:inline">{copied ? "Copied" : "Copy"}</span>
               </button>
               <button
                 onClick={handleDownloadPdf}
-                className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 transition-colors"
+                className="flex items-center gap-1 px-2 py-1 sm:px-2.5 sm:py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 transition-colors text-xs"
                 title="Download this response as a PDF document"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>Download PDF</span>
+                <span><span className="hidden xs:inline">Download </span>PDF</span>
               </button>
             </div>
           </div>
@@ -331,10 +331,10 @@ export default function MessageItem({
           message.followups.filter(
             (f) => typeof f === "string" && f.trim().length > 3 && !f.includes("<") && !f.includes(">")
           ).length > 0 && (
-            <div className="mt-2.5 flex flex-wrap items-center gap-1.5 animate-in fade-in duration-300">
-              <span className="text-[11px] font-medium text-slate-600 flex items-center gap-1 mr-1">
-                <Sparkles className="w-3 h-3 text-amber-500" />
-                Suggested Follow-ups:
+            <div className="mt-2 sm:mt-2.5 flex flex-wrap items-center gap-1 sm:gap-1.5 animate-in fade-in duration-300">
+              <span className="text-[10px] sm:text-[11px] font-medium text-slate-500 flex items-center gap-1 mr-0.5">
+                <Sparkles className="w-3 h-3 text-amber-500 shrink-0" />
+                <span className="hidden xs:inline">Suggested </span>Follow-ups:
               </span>
               {message.followups
                 .filter(
@@ -344,7 +344,7 @@ export default function MessageItem({
                   <button
                     key={idx}
                     onClick={() => onSelectFollowup(suggestion)}
-                    className="text-xs px-2.5 py-1 bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-700 border border-slate-200 hover:border-blue-300 rounded-xl shadow-2xs transition-all active:scale-98 text-left cursor-pointer"
+                    className="text-xs px-2 py-1 sm:px-2.5 sm:py-1 bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-700 border border-slate-200 hover:border-blue-300 rounded-xl shadow-2xs transition-all active:scale-98 text-left cursor-pointer break-words max-w-full"
                   >
                     {suggestion}
                   </button>

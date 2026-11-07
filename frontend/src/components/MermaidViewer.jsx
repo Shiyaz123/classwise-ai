@@ -75,26 +75,26 @@ export default function MermaidViewer({ chart }) {
   }
 
   return (
-    <div data-testid="mermaid-container" className="my-3 bg-white p-4 border border-slate-200/90 rounded-2xl shadow-2xs overflow-hidden">
-      <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-100 text-slate-500 text-xs">
+    <div data-testid="mermaid-container" className="my-3 bg-white p-3 sm:p-4 border border-slate-200/90 rounded-2xl shadow-2xs overflow-hidden max-w-full">
+      <div className="flex items-center justify-between pb-2 mb-2 sm:mb-3 border-b border-slate-100 text-slate-500 text-xs">
         <span className="flex items-center gap-1.5 font-bold text-slate-700 text-xs">
-          <span className="w-2 h-2 rounded-full bg-blue-500" />
+          <span className="w-2 h-2 rounded-full bg-blue-500 shrink-0" />
           Concept Visualizer
         </span>
         <button
           onClick={copyChart}
-          className="flex items-center gap-1 text-[11px] text-slate-400 hover:text-slate-700 transition-colors"
+          className="flex items-center gap-1 text-[11px] text-slate-400 hover:text-slate-700 transition-colors shrink-0"
           title="Copy Mermaid Code"
         >
           {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-          <span>{copied ? "Copied" : "Copy Diagram"}</span>
+          <span className="hidden xs:inline">{copied ? "Copied" : "Copy Diagram"}</span>
         </button>
       </div>
 
       <div
         ref={containerRef}
         dangerouslySetInnerHTML={{ __html: svg }}
-        className="overflow-x-auto flex justify-center py-2 [&>svg]:max-w-full [&>svg]:h-auto"
+        className="overflow-x-auto flex justify-center py-2 max-w-full [&>svg]:max-w-full [&>svg]:h-auto [&>svg]:min-w-[240px] touch-pan-x"
       />
     </div>
   );
