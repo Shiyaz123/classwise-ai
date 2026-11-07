@@ -77,6 +77,41 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
+## ☁️ Deployment Guide
+
+### Option 1: 1-Click Blueprint on Render (Recommended)
+This repository includes a [`render.yaml`](./render.yaml) specification that provisions both services automatically.
+1. Log in to [Render Dashboard](https://dashboard.render.com).
+2. Click **New +** > **Blueprint**.
+3. Select your repository: `Shiyaz123/classwise-ai`.
+4. Render will automatically detect `classwise-ai-backend` and `classwise-ai-frontend`.
+5. Enter your `GEMINI_API_KEY` under the backend environment settings.
+6. Click **Apply** to deploy!
+
+### Option 2: Vercel (Frontend) + Render (Backend)
+
+#### Step 1: Deploy Backend on Render
+1. In Render, click **New +** > **Web Service**.
+2. Connect `Shiyaz123/classwise-ai`.
+3. Set:
+   - **Build Command**: `pip install -r backend/requirements.txt`
+   - **Start Command**: `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
+4. Add Environment Variables:
+   - `GEMINI_API_KEY`: `<Your Gemini Key>`
+   - `GEMINI_MODEL`: `gemini-3.5-flash`
+   - `ENABLE_SEARCH_GROUNDING`: `true`
+5. Deploy and copy your backend URL (e.g. `https://classwise-ai-backend.onrender.com`).
+
+#### Step 2: Deploy Frontend on Vercel
+1. In [Vercel](https://vercel.com/new), click **Import** for `Shiyaz123/classwise-ai`.
+2. Set **Root Directory** to `frontend`.
+3. Add Environment Variable:
+   - `VITE_API_URL`: `https://classwise-ai-backend.onrender.com`
+4. Click **Deploy**. Vercel will build and host your React app with full SPA route support (`frontend/vercel.json`).
+
+
+---
+
 ## 🎯 Core Features & PRD Compliance
 
 | Feature ID | PRD Requirement | Implementation Highlights |
