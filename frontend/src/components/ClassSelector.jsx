@@ -21,6 +21,7 @@ export default function ClassSelector({ selectedClass, onSelectClass }) {
   return (
     <div className="relative" ref={dropdownRef}>
       <button
+        data-testid="class-selector-trigger"
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl shadow-xs transition-all duration-150 focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 active:scale-98"
         title="Select School Class (Classes 1–12)"
@@ -46,7 +47,7 @@ export default function ClassSelector({ selectedClass, onSelectClass }) {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-72 sm:w-80 bg-white border border-slate-200 rounded-2xl shadow-xl z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-100">
+        <div data-testid="class-dropdown-menu" className="absolute right-0 mt-2 w-72 sm:w-80 bg-white border border-slate-200 rounded-2xl shadow-xl z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-100">
           <div className="p-3 bg-gradient-to-r from-blue-50/80 to-indigo-50/80 border-b border-slate-100">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -68,6 +69,7 @@ export default function ClassSelector({ selectedClass, onSelectClass }) {
               return (
                 <button
                   key={c.level}
+                  data-testid={`class-option-${c.level}`}
                   onClick={() => {
                     onSelectClass(c.level);
                     setIsOpen(false);

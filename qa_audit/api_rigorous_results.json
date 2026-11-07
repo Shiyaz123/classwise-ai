@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-11-07T20:17:04Z",
+  "local_tests": [
+    {
+      "test": "Local API Health",
+      "status": "PASS",
+      "http_code": 200,
+      "latency_sec": 0.047,
+      "details": {
+        "status": "healthy",
+        "service": "ClassWise AI Backend",
+        "ready": true,
+        "supportedClasses": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "supportedModes": [
+          "student",
+          "teacher"
+        ]
+      }
+    }
+  ],
+  "production_tests": [
+    {
+      "test": "Production API Health",
+      "status": "PASS",
+      "http_code": 200,
+      "latency_sec": 1.444,
+      "details": {
+        "status": "healthy",
+        "service": "ClassWise AI Backend",
+        "ready": true,
+        "supportedClasses": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "supportedModes": [
+          "student",
+          "teacher"
+        ]
+      }
+    }
+  ],
+  "error_handling_tests": [
+    {
+      "test": "Empty Message Payload",
+      "status": "PASS",
+      "http_code": 422,
+      "expected_code": 422,
+      "latency_sec": 0.018,
+      "details": "Correctly rejected with HTTP 422"
+    },
+    {
+      "test": "Oversized Message (>4000 chars)",
+      "status": "PASS",
+      "http_code": 422,
+      "expected_code": 422,
+      "latency_sec": 0.025,
+      "details": "Correctly rejected with HTTP 422"
+    },
+    {
+      "test": "Invalid Class Level (0)",
+      "status": "PASS",
+      "http_code": 422,
+      "expected_code": 422,
+      "latency_sec": 0.003,
+      "details": "Correctly rejected with HTTP 422"
+    },
+    {
+      "test": "Invalid Class Level (13)",
+      "status": "PASS",
+      "http_code": 422,
+      "expected_code": 422,
+      "latency_sec": 0.028,
+      "details": "Correctly rejected with HTTP 422"
+    },
+    {
+      "test": "Invalid Mode ('admin')",
+      "status": "PASS",
+      "http_code": 422,
+      "expected_code": 422,
+      "latency_sec": 0.015,
+      "details": "Correctly rejected with HTTP 422"
+    },
+    {
+      "test": "Missing Required Fields",
+      "status": "PASS",
+      "http_code": 422,
+      "expected_code": 422,
+      "latency_sec": 0.016,
+      "details": "Correctly rejected with HTTP 422"
+    }
+  ],
+  "grounding_tests": [
+    {
+      "test": "Google Search Grounding Activation",
+      "status": "PASS",
+      "grounding_enabled_status": 200,
+      "citations_returned": 0,
+      "grounding_verified": false,
+      "note": "Grounding flag successfully processed by backend and GenAI client. Citations populated when Google Search metadata is returned."
+    }
+  ],
+  "leak_fix_verification": [
+    {
+      "test": "Class 1 TQ2 Tag Leak Fix Verification",
+      "status": "PASS",
+      "raw_tag_in_answer": false,
+      "structured_followups_count": 3,
+      "followups_sample": [
+        "How can I adapt this lesson plan for children with sensory sensitivities during the movement activity?",
+        "What are common misconceptions Class 1 students have about rain?",
+        "Can you provide a short quiz on the water cycle suitable for Class 1?"
+      ],
+      "answer_word_count": 472
+    }
+  ]
+}

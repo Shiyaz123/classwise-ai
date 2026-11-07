@@ -24,6 +24,22 @@
       "word_count": 22,
       "char_count": 107,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 22,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -51,6 +67,22 @@
       "word_count": 73,
       "char_count": 374,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 8.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.27,
+      "word_count": 73,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -78,6 +110,22 @@
       "word_count": 43,
       "char_count": 203,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 43,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -105,6 +153,22 @@
       "word_count": 37,
       "char_count": 206,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.6,
+      "word_count": 37,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -132,6 +196,22 @@
       "word_count": 35,
       "char_count": 188,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.5,
+      "word_count": 35,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -159,6 +239,22 @@
       "word_count": 69,
       "char_count": 365,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 69,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -186,6 +282,22 @@
       "word_count": 40,
       "char_count": 214,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 40,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -213,6 +325,22 @@
       "word_count": 32,
       "char_count": 188,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 32,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -240,6 +368,22 @@
       "word_count": 43,
       "char_count": 228,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 43,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -267,6 +411,22 @@
       "word_count": 65,
       "char_count": 333,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 65,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -294,6 +454,22 @@
       "word_count": 21,
       "char_count": 99,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 21,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -321,6 +497,22 @@
       "word_count": 77,
       "char_count": 398,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 8.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.27,
+      "word_count": 77,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -348,6 +540,22 @@
       "word_count": 38,
       "char_count": 180,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 38,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -375,6 +583,22 @@
       "word_count": 42,
       "char_count": 232,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.6,
+      "word_count": 42,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -402,6 +626,22 @@
       "word_count": 44,
       "char_count": 232,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.5,
+      "word_count": 44,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -429,6 +669,22 @@
       "word_count": 74,
       "char_count": 378,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 8.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.27,
+      "word_count": 74,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -456,6 +712,22 @@
       "word_count": 24,
       "char_count": 124,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 24,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -483,6 +755,22 @@
       "word_count": 42,
       "char_count": 243,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 42,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -510,6 +798,22 @@
       "word_count": 46,
       "char_count": 253,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 46,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -537,6 +841,22 @@
       "word_count": 47,
       "char_count": 251,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 47,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -564,6 +884,22 @@
       "word_count": 31,
       "char_count": 197,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 31,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -591,6 +927,22 @@
       "word_count": 134,
       "char_count": 753,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 134,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -618,6 +970,22 @@
       "word_count": 103,
       "char_count": 543,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 103,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -645,6 +1013,22 @@
       "word_count": 65,
       "char_count": 378,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.6,
+      "word_count": 65,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -672,6 +1056,22 @@
       "word_count": 112,
       "char_count": 622,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 112,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -699,6 +1099,22 @@
       "word_count": 117,
       "char_count": 651,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 117,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -726,6 +1142,22 @@
       "word_count": 65,
       "char_count": 378,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 65,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -753,6 +1185,22 @@
       "word_count": 88,
       "char_count": 546,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 88,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -780,6 +1228,22 @@
       "word_count": 115,
       "char_count": 630,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 115,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -807,6 +1271,22 @@
       "word_count": 179,
       "char_count": 949,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 179,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -834,6 +1314,22 @@
       "word_count": 33,
       "char_count": 210,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 33,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -861,6 +1357,22 @@
       "word_count": 220,
       "char_count": 1230,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 220,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -888,6 +1400,22 @@
       "word_count": 97,
       "char_count": 560,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 97,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -915,6 +1443,22 @@
       "word_count": 111,
       "char_count": 648,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 111,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -942,6 +1486,22 @@
       "word_count": 113,
       "char_count": 701,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 113,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -969,6 +1529,22 @@
       "word_count": 133,
       "char_count": 756,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 133,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -996,6 +1572,22 @@
       "word_count": 70,
       "char_count": 357,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 70,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1023,6 +1615,22 @@
       "word_count": 130,
       "char_count": 786,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 130,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1050,6 +1658,24 @@
       "word_count": 243,
       "char_count": 1226,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 7.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.32,
+      "word_count": 243,
+      "deductions": [
+        "Class 4 response overly long (243 words, target 80-180)"
+      ],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1077,6 +1703,22 @@
       "word_count": 179,
       "char_count": 971,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 179,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1104,6 +1746,22 @@
       "word_count": 45,
       "char_count": 279,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 45,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1131,6 +1789,22 @@
       "word_count": 124,
       "char_count": 715,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 124,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1158,6 +1832,22 @@
       "word_count": 76,
       "char_count": 433,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 76,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1185,6 +1875,22 @@
       "word_count": 150,
       "char_count": 890,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 150,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1212,6 +1918,22 @@
       "word_count": 143,
       "char_count": 829,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 143,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1239,6 +1961,22 @@
       "word_count": 201,
       "char_count": 1101,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 201,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1266,6 +2004,22 @@
       "word_count": 49,
       "char_count": 267,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 49,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1293,6 +2047,22 @@
       "word_count": 97,
       "char_count": 594,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 97,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1320,6 +2090,24 @@
       "word_count": 229,
       "char_count": 1265,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 7.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.32,
+      "word_count": 229,
+      "deductions": [
+        "Class 5 response overly long (229 words, target 80-180)"
+      ],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1347,6 +2135,22 @@
       "word_count": 176,
       "char_count": 916,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 176,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1374,6 +2178,22 @@
       "word_count": 60,
       "char_count": 392,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 60,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1401,6 +2221,22 @@
       "word_count": 223,
       "char_count": 1349,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 223,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1428,6 +2264,22 @@
       "word_count": 162,
       "char_count": 902,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 162,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1455,6 +2307,22 @@
       "word_count": 234,
       "char_count": 1564,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 234,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1482,6 +2350,22 @@
       "word_count": 166,
       "char_count": 1044,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 166,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1509,6 +2393,22 @@
       "word_count": 270,
       "char_count": 1583,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 270,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1536,6 +2436,22 @@
       "word_count": 90,
       "char_count": 531,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 90,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1563,6 +2479,22 @@
       "word_count": 181,
       "char_count": 1223,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 181,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1590,6 +2522,22 @@
       "word_count": 165,
       "char_count": 972,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 165,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1617,6 +2565,22 @@
       "word_count": 265,
       "char_count": 1588,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 265,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1644,6 +2608,22 @@
       "word_count": 63,
       "char_count": 384,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 63,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1671,6 +2651,22 @@
       "word_count": 203,
       "char_count": 1255,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 203,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1698,6 +2694,22 @@
       "word_count": 180,
       "char_count": 1017,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 180,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1725,6 +2737,22 @@
       "word_count": 261,
       "char_count": 1753,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 261,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1752,6 +2780,22 @@
       "word_count": 141,
       "char_count": 870,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 141,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1779,6 +2823,22 @@
       "word_count": 292,
       "char_count": 1753,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 292,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1806,6 +2866,22 @@
       "word_count": 67,
       "char_count": 444,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 67,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1833,6 +2909,22 @@
       "word_count": 183,
       "char_count": 1202,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 183,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1860,6 +2952,22 @@
       "word_count": 198,
       "char_count": 1116,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 198,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1887,6 +2995,22 @@
       "word_count": 287,
       "char_count": 1681,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 287,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1914,6 +3038,22 @@
       "word_count": 55,
       "char_count": 356,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 55,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1941,6 +3081,22 @@
       "word_count": 216,
       "char_count": 1370,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 216,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -1968,6 +3124,22 @@
       "word_count": 193,
       "char_count": 1014,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 193,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -1995,6 +3167,22 @@
       "word_count": 235,
       "char_count": 1568,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 235,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2022,6 +3210,22 @@
       "word_count": 292,
       "char_count": 1823,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 292,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2049,6 +3253,22 @@
       "word_count": 263,
       "char_count": 1505,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 263,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2076,6 +3296,22 @@
       "word_count": 65,
       "char_count": 396,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 65,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2103,6 +3339,22 @@
       "word_count": 210,
       "char_count": 1433,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 210,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2130,6 +3382,22 @@
       "word_count": 266,
       "char_count": 1459,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 266,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2157,6 +3425,22 @@
       "word_count": 336,
       "char_count": 1959,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 336,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2184,6 +3468,22 @@
       "word_count": 51,
       "char_count": 319,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 51,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2211,6 +3511,22 @@
       "word_count": 360,
       "char_count": 2338,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 360,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2238,6 +3554,22 @@
       "word_count": 187,
       "char_count": 994,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 187,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2265,6 +3597,22 @@
       "word_count": 263,
       "char_count": 2007,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 263,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2292,6 +3640,22 @@
       "word_count": 306,
       "char_count": 2172,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 306,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2319,6 +3683,22 @@
       "word_count": 307,
       "char_count": 1932,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 307,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2346,6 +3726,22 @@
       "word_count": 82,
       "char_count": 535,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 82,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2373,6 +3769,22 @@
       "word_count": 249,
       "char_count": 1817,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 249,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2400,6 +3812,22 @@
       "word_count": 178,
       "char_count": 992,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 178,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2427,6 +3855,22 @@
       "word_count": 388,
       "char_count": 2491,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 388,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2454,6 +3898,22 @@
       "word_count": 54,
       "char_count": 345,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 54,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2481,6 +3941,22 @@
       "word_count": 304,
       "char_count": 1936,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 304,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2508,6 +3984,22 @@
       "word_count": 181,
       "char_count": 1026,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 181,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2535,6 +4027,22 @@
       "word_count": 292,
       "char_count": 2183,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 292,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2562,6 +4070,22 @@
       "word_count": 346,
       "char_count": 2264,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 346,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2589,6 +4113,22 @@
       "word_count": 370,
       "char_count": 2351,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 370,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2616,6 +4156,22 @@
       "word_count": 79,
       "char_count": 522,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 79,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2643,6 +4199,22 @@
       "word_count": 191,
       "char_count": 1358,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 191,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2670,6 +4242,22 @@
       "word_count": 216,
       "char_count": 1324,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 216,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2697,6 +4285,22 @@
       "word_count": 509,
       "char_count": 3045,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 509,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2724,6 +4328,22 @@
       "word_count": 77,
       "char_count": 503,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 77,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2751,6 +4371,22 @@
       "word_count": 439,
       "char_count": 2985,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 439,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2778,6 +4414,22 @@
       "word_count": 181,
       "char_count": 1018,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 181,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2805,6 +4457,26 @@
       "word_count": 415,
       "char_count": 3186,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 7.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.18,
+      "word_count": 415,
+      "deductions": [
+        "Photosynthesis missing key reactant/product"
+      ],
+      "flags": [
+        "Inspect photosynthesis chemical definition"
+      ],
+      "status": "AUTOMATED_HEURISTIC_FLAGGED"
     }
   },
   {
@@ -2832,6 +4504,22 @@
       "word_count": 295,
       "char_count": 2134,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 295,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2859,6 +4547,22 @@
       "word_count": 293,
       "char_count": 1985,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 293,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2886,6 +4590,22 @@
       "word_count": 91,
       "char_count": 539,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.0,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.7,
+      "word_count": 91,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2913,6 +4633,22 @@
       "word_count": 270,
       "char_count": 2148,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 270,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2940,6 +4676,22 @@
       "word_count": 313,
       "char_count": 1931,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 313,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -2967,6 +4719,22 @@
       "word_count": 421,
       "char_count": 2681,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 421,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -2994,6 +4762,22 @@
       "word_count": 60,
       "char_count": 384,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 60,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -3021,6 +4805,22 @@
       "word_count": 522,
       "char_count": 3551,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 522,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -3048,6 +4848,22 @@
       "word_count": 127,
       "char_count": 831,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 127,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -3075,6 +4891,26 @@
       "word_count": 455,
       "char_count": 3630,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 7.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.18,
+      "word_count": 455,
+      "deductions": [
+        "Photosynthesis missing key reactant/product"
+      ],
+      "flags": [
+        "Inspect photosynthesis chemical definition"
+      ],
+      "status": "AUTOMATED_HEURISTIC_FLAGGED"
     }
   },
   {
@@ -3102,6 +4938,22 @@
       "word_count": 339,
       "char_count": 2612,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 339,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -3129,6 +4981,22 @@
       "word_count": 275,
       "char_count": 1755,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 275,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -3156,6 +5024,22 @@
       "word_count": 88,
       "char_count": 537,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 88,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -3183,6 +5067,22 @@
       "word_count": 273,
       "char_count": 2173,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.5,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.68,
+      "word_count": 273,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   },
   {
@@ -3210,6 +5110,22 @@
       "word_count": 212,
       "char_count": 1314,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 10.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.77,
+      "word_count": 212,
+      "deductions": [],
+      "flags": [],
+      "status": "INDEPENDENTLY_VERIFIED"
     }
   },
   {
@@ -3237,6 +5153,22 @@
       "word_count": 325,
       "char_count": 2093,
       "issues": []
+    },
+    "rigorous_evaluation": {
+      "scores": {
+        "factual_correctness": 9.0,
+        "relevance": 10.0,
+        "age_appropriateness": 10.0,
+        "clarity": 9.5,
+        "completeness": 9.0,
+        "formatting": 10.0,
+        "tone": 10.0
+      },
+      "overall": 9.57,
+      "word_count": 325,
+      "deductions": [],
+      "flags": [],
+      "status": "AUTOMATED_HEURISTIC_PASS"
     }
   }
 ]

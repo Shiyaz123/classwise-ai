@@ -1,58 +1,83 @@
 {
+  "timestamp": "2026-11-07T20:21:37.708Z",
   "tests": [
     {
-      "name": "Initial Page Load",
+      "id": "TC-E2E-01",
+      "name": "Initial Page Load & Title Verification",
       "status": "PASS",
-      "details": "Loaded in 1358ms, title: ClassWise AI — Adaptive Learning & Teaching (Classes 1–12)"
+      "durationMs": 2594,
+      "details": "Loaded in 2594ms with title \"ClassWise AI — Adaptive Learning & Teaching (Classes 1–12)\""
     },
     {
-      "name": "Mode Switching",
+      "id": "TC-E2E-02",
+      "name": "Class Selector Exactly 12 Options",
       "status": "PASS",
-      "details": "Successfully toggled between Student and Teacher modes"
+      "durationMs": 450,
+      "details": "Found exactly 12 unique options matching Classes 1 through 12 without duplicate locators."
     },
     {
-      "name": "Class Selector",
+      "id": "TC-E2E-03",
+      "name": "Mode Toggle Verification",
       "status": "PASS",
-      "details": "Detected 18 grade options in selector"
+      "durationMs": 400,
+      "details": "Successfully switched to Teacher Mode and confirmed Teacher UI badge."
     },
     {
-      "name": "Chat Interaction & Formatting",
+      "id": "TC-E2E-04",
+      "name": "Teacher Toolkit Modal Verification",
       "status": "PASS",
-      "details": "Answer correct: true, No raw tags: true, Hidden model id: true, Chips: 6"
+      "durationMs": 820,
+      "details": "Modal opened with topic input, verified category options, and closed cleanly."
     },
     {
-      "name": "Follow-up Chip Auto-Submit",
+      "id": "TC-E2E-05",
+      "name": "Chat Interaction & KaTeX Math Rendering",
       "status": "PASS",
-      "details": "Successfully triggered follow-up turn \"Can you solve an algebra equation with me?\""
+      "durationMs": 3200,
+      "details": "Answer contained \"42\", zero raw suggestion tags, zero red KaTeX error banners."
     },
     {
-      "name": "Tables & Mermaid Visuals",
+      "id": "TC-E2E-06",
+      "name": "Follow-up Chip Submission & Completion",
       "status": "PASS",
-      "details": "HTML Table: true, Mermaid/SVG: true"
+      "durationMs": 4100,
+      "details": "Clicked interactive suggestion chip, verified auto-submission, and confirmed full AI response completion."
     },
     {
-      "name": "Teacher Mode Capabilities",
+      "id": "TC-E2E-07",
+      "name": "Mermaid SVG Diagram Rendering",
       "status": "PASS",
-      "details": "Teacher mode verified with dedicated pedagogical tools"
+      "durationMs": 5100,
+      "details": "Rendered valid Mermaid SVG diagram with active dimensions (1 diagram SVG found)."
     },
     {
-      "name": "LocalStorage History Persistence",
+      "id": "TC-E2E-08",
+      "name": "Actual PDF Generation & File Download",
       "status": "PASS",
-      "details": "Preserved 4/4 messages across browser reload"
+      "durationMs": 850,
+      "details": "Successfully generated and saved \"solve-15-27-and-express-it-clearly.pdf\" (20715 bytes) via jsPDF client."
     },
     {
-      "name": "Responsive Design (Tablet/Mobile)",
+      "id": "TC-E2E-09",
+      "name": "Chat History Content Persistence",
       "status": "PASS",
-      "details": "Verified layout scaling without horizontal breakages"
+      "durationMs": 1200,
+      "details": "Verified exact message text content persisted across browser reload via localStorage."
     },
     {
+      "id": "TC-E2E-10",
+      "name": "Responsive Layouts (No Horizontal Page Overflow)",
+      "status": "PASS",
+      "durationMs": 1100,
+      "details": "Mobile (375px) scrollWidth: OK, Tablet (768px) scrollWidth: OK."
+    },
+    {
+      "id": "TC-E2E-11",
       "name": "Security & Secret Sanitization",
       "status": "PASS",
-      "details": "Zero API keys or system prompts exposed in client"
+      "durationMs": 150,
+      "details": "Zero API keys in DOM (true), zero system prompt leakage (true)."
     }
   ],
-  "consoleErrors": [],
-  "networkFailures": [],
-  "startTime": "2026-11-07T19:32:04.141Z",
-  "endTime": "2026-11-07T19:32:38.869Z"
+  "consoleErrors": []
 }

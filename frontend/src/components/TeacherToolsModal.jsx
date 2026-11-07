@@ -78,7 +78,7 @@ export default function TeacherToolsModal({ isOpen, onClose, onSelectTool, selec
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/40 backdrop-blur-xs animate-in fade-in duration-150">
+    <div data-testid="teacher-tools-modal" className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/40 backdrop-blur-xs animate-in fade-in duration-150">
       <div className="relative w-full max-w-2xl bg-white rounded-3xl p-5 sm:p-7 shadow-2xl border border-slate-200 animate-in zoom-in-95 duration-150 max-h-[90vh] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-100">
@@ -96,6 +96,7 @@ export default function TeacherToolsModal({ isOpen, onClose, onSelectTool, selec
             </div>
           </div>
           <button
+            data-testid="close-teacher-modal"
             onClick={onClose}
             className="p-2 text-slate-400 hover:text-slate-600 rounded-xl hover:bg-slate-100 transition-colors"
           >

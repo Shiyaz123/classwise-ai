@@ -55,6 +55,7 @@ export default function Composer({
           <div className="flex flex-wrap items-center gap-1.5">
             {isTeacher ? (
               <button
+                data-testid="teacher-toolkit-btn"
                 onClick={onOpenTeacherModal}
                 className="flex items-center gap-1.5 px-3 py-1 bg-purple-50 hover:bg-purple-100 text-purple-700 font-semibold border border-purple-200/80 rounded-xl transition-all shadow-2xs active:scale-98"
               >

@@ -75,7 +75,7 @@ export default function MermaidViewer({ chart }) {
   }
 
   return (
-    <div className="my-3 bg-white p-4 border border-slate-200/90 rounded-2xl shadow-2xs overflow-hidden">
+    <div data-testid="mermaid-container" className="my-3 bg-white p-4 border border-slate-200/90 rounded-2xl shadow-2xs overflow-hidden">
       <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-100 text-slate-500 text-xs">
         <span className="flex items-center gap-1.5 font-bold text-slate-700 text-xs">
           <span className="w-2 h-2 rounded-full bg-blue-500" />
