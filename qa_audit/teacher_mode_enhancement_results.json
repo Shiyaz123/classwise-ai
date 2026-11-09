@@ -1,0 +1,82 @@
+[
+  {
+    "id": "T1_TEACH_PATHWAY_CLASS6",
+    "name": "How to teach Photosynthesis to Class 6",
+    "mode": "teacher",
+    "class_level": 6,
+    "passed": true,
+    "reasons": [],
+    "answer_length": 7820,
+    "followups_count": 3,
+    "followups": [
+      "How can I demonstrate starch testing in leaves as a follow-up lab activity?",
+      "What are some common misconceptions Class 6 students have about plant nutrition?",
+      "Can you provide a short 10-mark quiz on photosynthesis for Class 6?"
+    ],
+    "sample_snippet": "## A. Lesson Overview\n- **Topic**: Photosynthesis\n- **Class**: Class 6\n- **Subject**: Science\n- **Suggested Duration**: 45 minutes\n- **Learning Objectives**:\n  1. Students will be able to define photosynthesis as the process by which green plants make their own food.\n  2. Students will be able to id"
+  },
+  {
+    "id": "T2_QUESTION_PAPER_CLASS10",
+    "name": "Create a question paper on Linear Equations for Class 10",
+    "mode": "teacher",
+    "class_level": 10,
+    "passed": true,
+    "reasons": [],
+    "answer_length": 7643,
+    "followups_count": 3,
+    "followups": [
+      "Would you like a remedial worksheet on graphical methods for struggling students?",
+      "Do you need a quick 10-minute quiz on consistency conditions for linear equations?",
+      "Shall I create an extension assignment focusing on word problems involving speed and distance?"
+    ],
+    "sample_snippet": "# Mathematics Examination\n**Class:** Class 10  \n**Time Allowed:** 1.5 Hours  \n**Maximum Marks:** 40 Marks  \n\n---\n\n## General Instructions:\n1. This question paper contains **12 questions** divided into **three sections**: Section A (MCQs), Section B (Short Answer), and Section C (Long Answer / HOTS)."
+  },
+  {
+    "id": "T3_WORKSHEET_CLASS2",
+    "name": "Create a worksheet on Addition for Class 2",
+    "mode": "teacher",
+    "class_level": 2,
+    "passed": true,
+    "reasons": [],
+    "answer_length": 2080,
+    "followups_count": 3,
+    "followups": [
+      "Would you like me to create a second worksheet focused on addition with regrouping (carrying over)?",
+      "Do you need a short quiz or formative assessment on this topic?",
+      "Would you like some hands-on classroom activity ideas for teaching addition to Class 2?"
+    ],
+    "sample_snippet": "Name: ___________________________ | Class: Class 2 | Roll No: ___________ | Date: ___________\n\n---\n\n## Part 1: Warm-up (Foundational Recall)\n*Count the objects and write the total number.*\n\n1. \ud83c\udf4e\ud83c\udf4e + \ud83c\udf4e = ___________\n2. \ud83c\udf88\ud83c\udf88\ud83c\udf88 + \ud83c\udf88\ud83c\udf88 = ___________\n3. \u2b50\ufe0f\u2b50\ufe0f + \u2b50\ufe0f\u2b50\ufe0f\u2b50\ufe0f = ___________\n\n*Find the sum using simple c"
+  },
+  {
+    "id": "T4_REMEDIATION_CLASS7",
+    "name": "How do I help weak students with Fractions in Class 7?",
+    "mode": "teacher",
+    "class_level": 7,
+    "passed": true,
+    "reasons": [],
+    "answer_length": 5080,
+    "followups_count": 3,
+    "followups": [
+      "How do I teach fraction division without just saying 'keep-change-flip'?",
+      "What are some engaging game-based activities for fractions in Class 7?",
+      "How can I assess if a student truly understands LCM for unlike denominators?"
+    ],
+    "sample_snippet": "Helping struggling Class 7 students master fractions requires moving away from abstract rules (like \"invert and multiply\") and returning to concrete visualization, tactile models, and structured step-by-step scaffolding. \n\nHere is a practical, teacher-tested remediation strategy to diagnose root cau"
+  },
+  {
+    "id": "S1_STUDENT_MODE_UNCHANGED",
+    "name": "Student Mode - What is photosynthesis? (Class 6)",
+    "mode": "student",
+    "class_level": 6,
+    "passed": true,
+    "reasons": [],
+    "answer_length": 1766,
+    "followups_count": 3,
+    "followups": [
+      "What is the role of chlorophyll in photosynthesis?",
+      "How do stomata help plants take in carbon dioxide?",
+      "What is the difference between photosynthesis and respiration?"
+    ],
+    "sample_snippet": "Photosynthesis is the process by which green plants, algae, and some bacteria use sunlight, water, and carbon dioxide to create oxygen and energy in the form of sugar. \n\nDuring this process, plants act like tiny food factories, converting light energy from the Sun into chemical energy that helps the"
+  }
+]
